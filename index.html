@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Katana Neón - Juego</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <!-- MENU / UI -->
+  <div id="menu" class="overlay">
+    <div class="card neon-card">
+      <h1>Katana Neón</h1>
+      <div class="highscore-small" id="menuHighscore"></div>
+      <div class="menu-buttons">
+        <button id="btnPlay" class="primary">Jugar</button>
+        <button id="btnScores">Tabla de puntajes</button>
+        <button id="btnHow">Cómo jugar</button>
+      </div>
+    </div>
+    <div class="footer-note">Hecho con PixiJS + GSAP — Prototipo</div>
+  </div>
+
+  <!-- SCOREBOARD -->
+  <div id="scoreboard" class="overlay hidden">
+    <div class="card neon-card">
+      <h2>Tabla de puntajes</h2>
+      <div id="scoresList" class="scores-list"></div>
+      <div style="display:flex;gap:10px;margin-top:12px;">
+        <button id="btnBackFromScores">Volver</button>
+        <button id="btnClearScores" class="danger">Borrar puntajes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN / HUD -->
+  <div id="hud" class="hud">
+    <div id="topLeft" class="hud-left">
+      <div id="lives" class="lives"></div>
+    </div>
+    <div id="topCenter" class="hud-center">
+      <div id="bigTimer" class="big-timer hidden"></div>
+    </div>
+    <div id="topRight" class="hud-right">
+      <div id="scoreDisplay" class="score-display">Score: 0</div>
+    </div>
+  </div>
+
+  <!-- PIXI canvas injected by js -->
+  <div id="gameArea"></div>
+
+  <!-- Librerías -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@7/dist/pixi.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+  <!-- Juego -->
+  <script src="./js/main.js"></script>
+</body>
+</html>
